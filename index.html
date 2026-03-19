@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>96片 拼圖遊戲</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>拼圖遊戲 (96片)</h1>
+            <div class="controls">
+                <input type="file" id="imageLoader" accept="image/*" class="file-input">
+                <label for="imageLoader" class="btn">上傳圖片</label>
+                <button id="startBtn" class="btn" disabled>開始遊戲</button>
+            </div>
+            <div id="status" class="status">請上傳一張圖片以開始</div>
+        </header>
+
+        <main class="game-area">
+            <div class="board-container">
+                <div id="puzzleBoard" class="puzzle-board"></div>
+            </div>
+            <div class="pieces-container-wrapper">
+                <h3>拼圖碎片 (請拖曳至左側拼板)</h3>
+                <div id="piecesContainer" class="pieces-container"></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 恭喜完成！ 🎉</h2>
+            <p>你花了 <span id="timeTaken">0</span> 秒完成這副96片的拼圖！</p>
+            <button id="playAgainBtn" class="btn">再玩一次</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
